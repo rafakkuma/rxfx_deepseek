@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Rafa Gamboa-Cardeña, designer and visual communicator">
+    <title>RXFX - Rafa Gamboa-Cardeña Portfolio</title>
+    <style>
+        :root {
+            --primary-color: rgb(216, 238, 249);
+            --secondary-color: #2c3e50;
+            --accent-color: #34495e;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--secondary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+        }
+
+        .bio {
+            max-width: 600px;
+            padding: 1rem;
+        }
+
+        .cv-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cv-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer nav {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="./seaweed.svg" alt="RXFX Logo" class="logo" width="100" height="100">
+        </a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <img src="./R2025 BYN.png" alt="R letter with vector anchors" class="hero-image">
+            <div class="bio">
+                <h1>Rafa Gamboa-Cardeña</h1>
+                <h2>Design Research & Visual Communication</h2>
+                <p>Specializing in sustainability, technology, and impactful storytelling with over a decade of experience working across social and environmental impact projects, luxury brands, and international NGOs. Expertise spans visual merchandising, brand strategy, and design research.</p>
+                <a href="./RGC CV 2025.pdf" download class="cv-button" aria-label="Download CV">
+                    Download CV
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <p>&copy; <span id="current-year"></span> RXFX. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Automatically update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
